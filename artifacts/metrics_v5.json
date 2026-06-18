@@ -1,0 +1,15 @@
+{
+  "original_rows": 34459,
+  "conflicting_texts": 2061,
+  "conflict_rows_removed": 7976,
+  "duplicate_rows_removed": 1709,
+  "clean_rows": 24774,
+  "classes": 70,
+  "split_seed": 42,
+  "validation_rows": 4955,
+  "accuracy": 0.6425832492431887,
+  "weighted_f1": 0.6570784841028016,
+  "macro_f1": 0.6498934020402538,
+  "weighted_precision": 0.692568799169724,
+  "weighted_recall": 0.6425832492431887
+}
