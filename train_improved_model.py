@@ -18,6 +18,7 @@ def main() -> None:
     args = parser.parse_args()
 
     data, cleaning = load_and_clean_data(args.data)
+    print(f"[데이터] 정제 후 {cleaning['clean_rows']}행, {cleaning['classes']}클래스")
     train_data, validation_data = train_test_split(
         data,
         test_size=0.2,

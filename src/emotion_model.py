@@ -19,7 +19,9 @@ def normalize_text(value: object) -> str:
 
 
 def load_and_clean_data(csv_path: str | Path) -> tuple[pd.DataFrame, dict[str, int]]:
-    data = pd.read_csv(csv_path).dropna(subset=[TEXT_COLUMN, LABEL_COLUMN]).copy()
+    data = pd.read_csv(csv_path, encoding="utf-8-sig").dropna(
+        subset=[TEXT_COLUMN, LABEL_COLUMN]
+    ).copy()
     data["text"] = data[TEXT_COLUMN].astype(str).str.strip()
     data["label"] = data[LABEL_COLUMN].astype(str).str.strip()
     data["normalized_text"] = data["text"].map(normalize_text)
